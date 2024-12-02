@@ -1,0 +1,453 @@
+@import url('https://fonts.cdnfonts.com/css/8bit-wonder');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: '8BIT WONDER', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #080808;
+    color: white;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+#header{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#headerContact {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    animation: none;
+}
+
+#headerContact {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    animation: none;
+}
+
+.container{
+    padding: 10px 1%;
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    position: relative;
+}
+
+nav ul li a::after{ /*Hidden for now*/
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{ /*No longer hidden*/
+    width: 100%;
+}
+
+.header-text{
+    margin: 0%;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.header-text p {
+    text-align: left;
+    align-items: flex-start; 
+}
+
+#header h1 {
+    font-size: 55px;
+    white-space: nowrap;         
+    overflow: hidden;            
+    border-right: .15em solid white; 
+    width: 0;                   
+    animation: typing 3s steps(23, end) forwards, blink .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.header-text h1 span{
+    color: #ff004f;
+}
+/*--------------------------------About---------------------------------------------*/
+#about {
+    max-width: 80vw;
+    margin: 0 auto; 
+    padding-top: 125px;
+    color: #ffffff;
+    padding-bottom: 250px;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-col-1, .about-col-2 {
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.about-col-1 img {
+    width: 20%; 
+    height: auto;
+    border-radius: 50%; 
+}
+
+#about h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+}
+
+.about-col-2 p {
+    font-size: 13px;
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+/*--------------------------------Other---------------------------------------------*/
+.header-text h1 {
+    font-size: 55px;
+}
+
+/*--------------------------------Projects---------------------------------------------*/
+#headerProjects {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #080808;
+    color: white;
+    padding: 2em 0;
+}
+
+#projectsSection {
+    max-width: 80vw;
+    margin: 2em auto 0;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.project {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.project h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.project p,
+.project ul {
+    margin-bottom: 10px;
+}
+
+.project ul li {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-bottom: 5px;
+}
+
+.project a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff004f;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.projectLink {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.projectLink:hover .project {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project a:hover {
+    background-color: #ff3366;
+}
+/*--------------------------------Work Experience---------------------------------------------*/
+#headerWorkExperience {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #080808;
+    color: white;
+    padding: 2em 0;
+}
+
+#experienceSection {
+    max-width: 80vw;
+    margin: 2em auto 0;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.experience {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.experience h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.experience p {
+    margin-bottom: 10px;
+}
+
+.experience ul {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.experience ul li {
+    list-style-type: disc;
+    list-style-position: outside;
+    margin-bottom: 5px;
+}
+
+.experienceLink {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.experienceLink:hover {
+    transform: scale(1.05);
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.experience {
+    padding: 20px;
+}
+
+/*--------------------------------Service---------------------------------------------*/
+#headerService {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #080808;
+    color: white;
+    padding: 2em 0;
+}
+
+#serviceSection {
+    max-width: 80vw;
+    margin: 2em auto 0;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.serviceCard {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.serviceCard h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.serviceCard p {
+    margin-bottom: 10px;
+}
+
+.serviceCard ul {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.serviceCard ul li {
+    list-style-type: disc;
+    list-style-position: outside;
+    margin-bottom: 5px;
+}
+
+.serviceLink {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.serviceLink:hover {
+    transform: scale(1.05);
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service {
+    padding: 20px;
+}
+
+/*--------------------------------Contact---------------------------------------------*/
+.Title {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+#contact {
+    padding: 2em 0;
+    background-color: #080808;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.Title {
+    font-size: 55px;
+    margin-bottom: 1em;
+}
+
+.contact-left p {
+    margin: 0.5em 0;
+    font-size: 16px;
+}
+
+.social-icons {
+    margin-top: 1.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+}
+
+footer {
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.small-text {
+    font-size: 7px;
+    margin: 0;
+    padding: 0;
+}
+
+/*--------------------------------Toggle Button---------------------------------------------*/
+#downloadCSV {
+    margin-right: auto;
+    padding: 8px 15px;
+    border: none;
+    background-color: #ff004f;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#downloadCSV:hover {
+    background-color: #ff3366;
+}
